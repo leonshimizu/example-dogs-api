@@ -1,10 +1,11 @@
 POST http://localhost:3000/dogs
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzUyOTU0OTN9.0vxj6hHrFLT_3GsviTv19jY_MbsBbQsNhY01GFw3W2E
 content-type: application/json
 
 {
-  "name": "Princess",
-  "age": 10, 
-  "breed": "dalmation"
+  "name": "Test",
+  "age": 5, 
+  "breed": "Test dog"
 }
 
 ###

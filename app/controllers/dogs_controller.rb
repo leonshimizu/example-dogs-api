@@ -6,6 +6,12 @@ class DogsController < ApplicationController
       breed: params[:breed]
     )
     dog.save
-    render json: dog.as_json
+    if current_user
+      render json: dog.as_json
+    else
+      render json: {message: "Sorry, you must be logged in..."}
+    end
+
+    
   end 
 end
