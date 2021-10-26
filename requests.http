@@ -10,17 +10,17 @@ content-type: application/json
 }
 
 ### update
-PATCH http://localhost:3000/dogs/6
+PATCH http://localhost:3000/dogs/7
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzUyOTU0OTN9.0vxj6hHrFLT_3GsviTv19jY_MbsBbQsNhY01GFw3W2E
 content-type: application/json
 
 {
-  "user_id": 1
+  "user_id": 2
 }
 
 ### index
 GET http://localhost:3000/dogs
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2MzUyOTkwMTl9.qiefGvCRRHfR8TyrixO0rxP9QjNk7F2gwlKEeo_j4AI
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzUyOTU0OTN9.0vxj6hHrFLT_3GsviTv19jY_MbsBbQsNhY01GFw3W2E
 
 ###
 # signup
@@ -43,3 +43,9 @@ Content-Type: application/json
   "email": "luka@gmail.com",
   "password": "password"
 }
+
+# Luka's JWT
+# eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2MzUyOTkwMTl9.qiefGvCRRHfR8TyrixO0rxP9QjNk7F2gwlKEeo_j4AI
+
+# Stassie's JWT
+# eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzUyOTU0OTN9.0vxj6hHrFLT_3GsviTv19jY_MbsBbQsNhY01GFw3W2E
