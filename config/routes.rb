@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   post "/dogs" => "dogs#create"
   patch "/dogs/:id" => "dogs#update"
+  get "/dogs" => "dogs#index"
 
   post "/users" => "users#create"
 

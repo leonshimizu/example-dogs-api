@@ -22,4 +22,13 @@ class DogsController < ApplicationController
     dog.save
     render json: dog.as_json
   end
+
+  def index
+    dogs = Dog.all 
+    if current_user
+      render json: dogs.as_json
+    else
+      render json: {message: "Sorry, you must be logged in..."}
+    end    
+  end
 end
