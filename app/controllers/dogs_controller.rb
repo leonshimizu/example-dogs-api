@@ -3,11 +3,12 @@ class DogsController < ApplicationController
     dog = Dog.new(
       name: params[:name],
       age: params[:age],
-      breed: params[:breed]
+      breed: params[:breed],
+      user_id: current_user.id
     )
     dog.save
     if current_user
-      render json: dog.as_json
+      render json: dog
     else
       render json: {message: "Sorry, you must be logged in..."}
     end    
@@ -20,13 +21,13 @@ class DogsController < ApplicationController
     dog.breed = params[:breed] || dog.breed
     dog.user_id = params[:user_id] || dog.user_id
     dog.save
-    render json: dog.as_json
+    render json: dog
   end
 
   def index
     dogs = Dog.all 
     if current_user
-      render json: dogs.as_json
+      render json: dogs
     else
       render json: {message: "Sorry, you must be logged in..."}
     end    
