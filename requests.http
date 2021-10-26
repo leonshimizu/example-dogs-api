@@ -9,6 +9,16 @@ content-type: application/json
 }
 
 ###
+PATCH http://localhost:3000/dogs/6
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzUyOTU0OTN9.0vxj6hHrFLT_3GsviTv19jY_MbsBbQsNhY01GFw3W2E
+content-type: application/json
+
+{
+  "user_id": 1
+}
+
+###
+# signup
 POST http://localhost:3000/users
 content-type: application/json
 
@@ -20,6 +30,7 @@ content-type: application/json
 }
 
 ###
+# login
 POST http://localhost:3000/sessions
 Content-Type: application/json
 
