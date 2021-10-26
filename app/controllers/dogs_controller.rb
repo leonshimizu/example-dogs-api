@@ -21,7 +21,11 @@ class DogsController < ApplicationController
     dog.breed = params[:breed] || dog.breed
     dog.user_id = params[:user_id] || dog.user_id
     dog.save
-    render json: dog
+    if current_user
+      render json: dog
+    else
+      render json: {message: "Sorry, you must be logged in..."}
+    end  
   end
 
   def index
