@@ -29,7 +29,7 @@ class DogsController < ApplicationController
   end
 
   def index
-    dogs = Dog.all 
+    dogs = current_user.dogs
     if current_user
       render json: dogs
     else
