@@ -6,3 +6,14 @@ content-type: application/json
   "age": 10, 
   "breed": "dalmation"
 }
+
+###
+POST http://localhost:3000/users
+content-type: application/json
+
+{
+  "name": "Stassie",
+  "email": "stassie@gmail.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
